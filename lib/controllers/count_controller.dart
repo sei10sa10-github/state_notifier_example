@@ -17,7 +17,7 @@ class CountController extends StateNotifier<CountState> with LocatorMixin {
 
   void load() async {
     _loadIfNecessary(() async {
-      await Future.delayed(Duration(milliseconds: 500));
+      await Future.delayed(Duration(milliseconds: 1000));
       state = await counterService.getCount();
     });
   }

@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       home: Provider(
         create: (_) => CounterService(FileStorage()),
         child: StateNotifierProvider<CountController, CountState>(
-          create: (_) => CountController(CountState.loading()),
+          create: (_) => CountController(CountState()),
           child: HomePage(),
         ),
       ),
